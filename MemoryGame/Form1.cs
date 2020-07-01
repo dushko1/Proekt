@@ -16,5 +16,25 @@ namespace MemoryGame
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form2 f2 = new Form2();
+            this.Hide();
+            f2.ShowDialog();
+
+        }
+
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form3 f3 = new Form3();
+            this.Hide();
+            f3.ShowDialog();
+        }
     }
 }

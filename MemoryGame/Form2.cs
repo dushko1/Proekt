@@ -16,5 +16,27 @@ namespace MemoryGame
         {
             InitializeComponent();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form2_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Form1 f1 = new Form1();
+            this.Hide();
+            f1.ShowDialog();
+
+
+        }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+            foreach(PictureBox p in panel1.Controls)
+            {
+                p.Image = Properties.Resources.brain1;
+            }
+        }
     }
 }
