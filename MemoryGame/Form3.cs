@@ -21,6 +21,7 @@ namespace MemoryGame
         Timer clickTimer = new Timer();
         int time = 100;
         Timer timer = new Timer { Interval = 1000 };
+        bool hard = false;
 
         
 
@@ -46,7 +47,7 @@ namespace MemoryGame
                 if (time < 0)
                 {
                     timer.Stop();
-                    MessageBox.Show("Out of time");
+                    MessageBox.Show("Out of time!\n"+"You lose!");
                     Reset();
                 }
                 var remaining = TimeSpan.FromSeconds(time);
@@ -61,6 +62,7 @@ namespace MemoryGame
             {
                 p.Tag = null;
                 p.Visible = true;
+                p.Enabled = true;
             }
             hide();
             setRandom();
@@ -120,6 +122,8 @@ namespace MemoryGame
             {
                 this.score += 1;
                 label2.Text = score.ToString();
+                secondguess.Enabled = firstguess.Enabled = false;
+                firstguess = secondguess = null;
 
             }
             else
@@ -129,8 +133,9 @@ namespace MemoryGame
                 clickTimer.Start();
             }
             
-            if (Convert.ToInt32(label2.Text)<12) return;
-            MessageBox.Show("Win");
+            if (Convert.ToInt32(label2.Text)<6) return;
+            if(hard) MessageBox.Show("Impressive!");
+            else MessageBox.Show("Win");
             Reset();
 
         }
@@ -208,6 +213,7 @@ namespace MemoryGame
             button3.Enabled = false;
             button4.Enabled = false;
             button2.Enabled = false;
+            hard = true;
 
         }
     }
