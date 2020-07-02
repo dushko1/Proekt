@@ -28,6 +28,7 @@ namespace MemoryGame
             InitializeComponent();
         }
 
+
         private void Form3_FormClosed(object sender, FormClosedEventArgs e)
         {
             Form1 f1 = new Form1();
