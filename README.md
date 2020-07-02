@@ -44,7 +44,8 @@ private static IEnumerable<Image> images
 
 Функцијата ```Randomize()``` со повикување на функцијата ```getEmpty()``` два пати за секоја слика ја пополнува низата и може да започне играта.
 
-Функцијата ```c#
+Функцијата
+```c#
 
 private void ClickImage(object sender, EventArgs e)
         {
