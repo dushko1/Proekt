@@ -99,30 +99,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\brain.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\brain1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\retina.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\img2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\img3.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\img4.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\img5.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\img1.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\batmanOK.jpg" />
   </ItemGroup>
   <ItemGroup>
