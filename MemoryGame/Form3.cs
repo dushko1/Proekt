@@ -80,12 +80,19 @@ namespace MemoryGame
             {
                 return new Image[]
                 {
-                    Properties.Resources.retina,
-                    Properties.Resources.img5,
-                    Properties.Resources.img4,
-                    Properties.Resources.img3,
-                    Properties.Resources.img2,
-                    Properties.Resources.img1
+                    Properties.Resources.batman,
+                    Properties.Resources.captainamerica,
+                    Properties.Resources.daredevil,
+                    Properties.Resources.flash,
+                    Properties.Resources.joker,
+                    Properties.Resources.ironman,
+                    Properties.Resources.superman,
+                    Properties.Resources.deathstroke,
+                    Properties.Resources.loki,
+                    Properties.Resources.Green_Lantern_logo,
+                    Properties.Resources.spiderman,
+                    Properties.Resources.wolverine
+
 
                 };
             }
@@ -136,7 +143,7 @@ namespace MemoryGame
                 clickTimer.Start();
             }
             
-            if (Convert.ToInt32(label2.Text)<6) return;
+            if (Convert.ToInt32(label2.Text)<12) return;
             if(hard) MessageBox.Show("Impressive!");
             else MessageBox.Show("Win");
             timer.Stop();
@@ -171,12 +178,11 @@ namespace MemoryGame
         }
         private void tick(object sender, EventArgs e)
         {
-            
             clickTimer.Stop();
-            if (!first) firstguess.Image = secondguess.Image = Properties.Resources.brain1;
+            if (!first) firstguess.Image = secondguess.Image = Properties.Resources.riddler;
             firstguess = secondguess = null;
             canclick = true;
-            
+
         }
 
         private void start(int time,int interval)
@@ -184,7 +190,7 @@ namespace MemoryGame
             
             foreach (var p in pictureBoxes)
             {
-                p.Image = Properties.Resources.brain1;
+                p.Image = Properties.Resources.riddler;
 
             }
             Reset();
@@ -195,8 +201,6 @@ namespace MemoryGame
             clickTimer = new Timer();
             clickTimer.Interval = interval;
             clickTimer.Tick += tick;
-
-
 
         }
 
