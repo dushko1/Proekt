@@ -43,9 +43,9 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.hardbutton = new System.Windows.Forms.Button();
+            this.mediumbutton = new System.Windows.Forms.Button();
+            this.easybutton = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox24)).BeginInit();
@@ -212,38 +212,38 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.ClickImage);
             // 
-            // button3
+            // hardbutton
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(706, 218);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(165, 55);
-            this.button3.TabIndex = 70;
-            this.button3.Text = "Hard(30s)";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.hardbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.hardbutton.Location = new System.Drawing.Point(706, 218);
+            this.hardbutton.Name = "hardbutton";
+            this.hardbutton.Size = new System.Drawing.Size(165, 55);
+            this.hardbutton.TabIndex = 70;
+            this.hardbutton.Text = "Hard(30s)";
+            this.hardbutton.UseVisualStyleBackColor = true;
+            this.hardbutton.Click += new System.EventHandler(this.hardDifficulty);
             // 
-            // button2
+            // mediumbutton
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(706, 140);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(165, 55);
-            this.button2.TabIndex = 69;
-            this.button2.Text = "Medium(60s)";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.mediumbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mediumbutton.Location = new System.Drawing.Point(706, 140);
+            this.mediumbutton.Name = "mediumbutton";
+            this.mediumbutton.Size = new System.Drawing.Size(165, 55);
+            this.mediumbutton.TabIndex = 69;
+            this.mediumbutton.Text = "Medium(60s)";
+            this.mediumbutton.UseVisualStyleBackColor = true;
+            this.mediumbutton.Click += new System.EventHandler(this.mediumDifficulty);
             // 
-            // button4
+            // easybutton
             // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(706, 66);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(165, 55);
-            this.button4.TabIndex = 68;
-            this.button4.Text = "Easy(100s)";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.easybutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.easybutton.Location = new System.Drawing.Point(706, 66);
+            this.easybutton.Name = "easybutton";
+            this.easybutton.Size = new System.Drawing.Size(165, 55);
+            this.easybutton.TabIndex = 68;
+            this.easybutton.Text = "Easy(100s)";
+            this.easybutton.UseVisualStyleBackColor = true;
+            this.easybutton.Click += new System.EventHandler(this.easyDifficulty);
             // 
             // label4
             // 
@@ -262,9 +262,9 @@
             this.BackColor = System.Drawing.Color.Wheat;
             this.ClientSize = new System.Drawing.Size(913, 682);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.hardbutton);
+            this.Controls.Add(this.mediumbutton);
+            this.Controls.Add(this.easybutton);
             this.Controls.Add(this.pictureBox23);
             this.Controls.Add(this.pictureBox24);
             this.Controls.Add(this.pictureBox17);
@@ -316,9 +316,9 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button hardbutton;
+        private System.Windows.Forms.Button mediumbutton;
+        private System.Windows.Forms.Button easybutton;
         private System.Windows.Forms.Label label4;
     }
 }
