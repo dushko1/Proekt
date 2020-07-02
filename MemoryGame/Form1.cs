@@ -40,5 +40,12 @@ namespace MemoryGame
             f3.ShowDialog();
         }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Form4 f4 = new Form4();
+            this.Hide();
+            f4.ShowDialog();
+        }
+
     }
 }
