@@ -39,5 +39,6 @@ namespace MemoryGame
             this.Hide();
             f3.ShowDialog();
         }
+
     }
 }
