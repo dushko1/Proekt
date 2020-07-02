@@ -39,5 +39,51 @@ private static IEnumerable<Image> images
 
 ## Функции
 При клик за одбирање на тежина се повикува функцијата ```start()``` при што се доделуваат соодветни параметри според одбраната тежина. Таа функција ги ресетира сите слики и променливи и ја почнува играта.
+
 Функцијата ```getEmpty()``` враќа слободен ```Picturebox``` (за слободен се смета оној кој вредноста на ```Tag``` е null).
+
 Функцијата ```Randomize()``` со повикување на функцијата ```getEmpty()``` два пати за секоја слика ја пополнува низата и може да започне играта.
+
+Функцијата ```c#
+private void ClickImage(object sender, EventArgs e)
+        {
+            if (!canclick) return;
+            first = false;
+
+            if (firstguess == null)
+            {
+                firstguess = (PictureBox)sender;
+                firstguess.Image = (Image)firstguess.Tag;
+
+                return;
+
+            }
+            secondguess = (PictureBox)sender;
+            secondguess.Image = (Image)secondguess.Tag;
+
+
+            if (secondguess.Image==firstguess.Image && secondguess!=firstguess)
+            {
+                this.score += 1;
+                label2.Text = score.ToString();
+                secondguess.Enabled = firstguess.Enabled = false;
+                firstguess = secondguess = null;
+
+            }
+            else
+            {
+                
+                canclick = false;
+                clickTimer.Start();
+            }
+            
+            if (Convert.ToInt32(label2.Text)<18) return;
+            timer.Stop();
+            if(hard) MessageBox.Show("Impressive!");
+            else MessageBox.Show("Win");
+            
+            enableRestart();
+            
+
+        }
+```
