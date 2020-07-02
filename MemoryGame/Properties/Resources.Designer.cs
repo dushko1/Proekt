@@ -63,9 +63,9 @@ namespace MemoryGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap batmanOK {
+        internal static System.Drawing.Bitmap batman {
             get {
-                object obj = ResourceManager.GetObject("batmanOK", resourceCulture);
+                object obj = ResourceManager.GetObject("batman", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,9 +93,9 @@ namespace MemoryGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap captain_americaOK {
+        internal static System.Drawing.Bitmap captainamerica {
             get {
-                object obj = ResourceManager.GetObject("captain_americaOK", resourceCulture);
+                object obj = ResourceManager.GetObject("captainamerica", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,9 +113,9 @@ namespace MemoryGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Deadpool_Logo_1200x1200 {
+        internal static System.Drawing.Bitmap deadpool {
             get {
-                object obj = ResourceManager.GetObject("Deadpool_Logo_1200x1200", resourceCulture);
+                object obj = ResourceManager.GetObject("deadpool", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -233,9 +233,9 @@ namespace MemoryGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap lokiOK {
+        internal static System.Drawing.Bitmap loki {
             get {
-                object obj = ResourceManager.GetObject("lokiOK", resourceCulture);
+                object obj = ResourceManager.GetObject("loki", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -243,9 +243,9 @@ namespace MemoryGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap punisherOK {
+        internal static System.Drawing.Bitmap punisher {
             get {
-                object obj = ResourceManager.GetObject("punisherOK", resourceCulture);
+                object obj = ResourceManager.GetObject("punisher", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -263,9 +263,9 @@ namespace MemoryGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap spidermanOK {
+        internal static System.Drawing.Bitmap riddler {
             get {
-                object obj = ResourceManager.GetObject("spidermanOK", resourceCulture);
+                object obj = ResourceManager.GetObject("riddler", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -273,9 +273,9 @@ namespace MemoryGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap superman_clipart_logo_4 {
+        internal static System.Drawing.Bitmap spiderman {
             get {
-                object obj = ResourceManager.GetObject("superman_clipart_logo_4", resourceCulture);
+                object obj = ResourceManager.GetObject("spiderman", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -283,9 +283,19 @@ namespace MemoryGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Teen_titans_logoOK {
+        internal static System.Drawing.Bitmap superman {
             get {
-                object obj = ResourceManager.GetObject("Teen_titans_logoOK", resourceCulture);
+                object obj = ResourceManager.GetObject("superman", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap teentitans {
+            get {
+                object obj = ResourceManager.GetObject("teentitans", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -303,9 +313,9 @@ namespace MemoryGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap thorOK {
+        internal static System.Drawing.Bitmap thor {
             get {
-                object obj = ResourceManager.GetObject("thorOK", resourceCulture);
+                object obj = ResourceManager.GetObject("thor", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -323,9 +333,9 @@ namespace MemoryGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap wonderwomanOK {
+        internal static System.Drawing.Bitmap wonderwoman {
             get {
-                object obj = ResourceManager.GetObject("wonderwomanOK", resourceCulture);
+                object obj = ResourceManager.GetObject("wonderwoman", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
