@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace MemoryGame
 {
-    public partial class Form1 : Form
+    public partial class GameMenu : Form
     {
-        public Form1()
+        public GameMenu()
         {
             InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form2 f2 = new Form2();
+            Level1 f2 = new Level1();
             this.Hide();
             f2.ShowDialog();
 
@@ -35,14 +35,14 @@ namespace MemoryGame
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Form3 f3 = new Form3();
+            Level2 f3 = new Level2();
             this.Hide();
             f3.ShowDialog();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Form4 f4 = new Form4();
+            Level3 f4 = new Level3();
             this.Hide();
             f4.ShowDialog();
         }

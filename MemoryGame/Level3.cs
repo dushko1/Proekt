@@ -11,58 +11,50 @@ using System.Windows.Forms;
 namespace MemoryGame
 {
 
-    public partial class Form2 : Form
+    public partial class Level3 : Form
     {
         PictureBox firstguess;
         PictureBox secondguess;
         int score = 0;
         bool canclick = false;
         Random rnd = new Random();
-        Timer clickTimer;
+        Timer clickTimer ;
         int time = 100;
-        Timer timer1;
+        Timer timer;
         bool hard = false;
         bool first = true;
-        public Form2()
+        public Level3()
         {
             InitializeComponent();
         }
 
-        private void Form2_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Form1 f1 = new Form1();
-            timer1.Stop();
-            clickTimer.Stop();
-            Hide();
-            f1.ShowDialog();
-        }
+
+
         private void startGameTimer()
         {
-            timer1 = new Timer { Interval = 1000 };
-            timer1.Start();
-            timer1.Tick += delegate
+            timer = new Timer { Interval = 1000 };
+            timer.Start();
+            timer.Tick += delegate
             {
-                this.time--;
-                if (this.time == 0)
+                time--;
+                if (time == 0)
                 {
-                    timer1.Stop();
+                    timer.Stop();
                     label3.Text = time.ToString() + "s";
-                    MessageBox.Show("Out of time!\n" + "You lose!");
+                    MessageBox.Show("Out of time!\n"+"You lose!");
                     enableRestart();
-                    return;
-
 
 
                 }
-
-                label3.Text = time.ToString() + "s";
+                
+                label3.Text =time.ToString()+"s";
 
             };
 
         }
         private void Reset()
         {
-            foreach (var p in pictureBoxes)
+            foreach(var p in pictureBoxes)
             {
                 p.Tag = null;
                 p.Enabled = true;
@@ -70,7 +62,7 @@ namespace MemoryGame
             firstguess = secondguess = null;
             first = true;
             Randomize();
-
+            
         }
 
         private PictureBox[] pictureBoxes
@@ -85,17 +77,23 @@ namespace MemoryGame
                 return new Image[]
                 {
                     Properties.Resources.batman,
-                   
+                    Properties.Resources.captainamerica,
                     Properties.Resources.daredevil,
-                   
+                    Properties.Resources.flash,
                     Properties.Resources.joker,
                     Properties.Resources.ironman,
                     Properties.Resources.superman,
-                   
+                    Properties.Resources.deathstroke,
                     Properties.Resources.loki,
                     Properties.Resources.Green_Lantern_logo,
-                    
-                    Properties.Resources.wolverine
+                    Properties.Resources.spiderman,
+                    Properties.Resources.wolverine,
+                    Properties.Resources.blackpanther,
+                    Properties.Resources.deadpool,
+                    Properties.Resources.hulk,
+                    Properties.Resources.teentitans,
+                    Properties.Resources.thanos,
+                    Properties.Resources.thor
 
 
                 };
@@ -107,7 +105,7 @@ namespace MemoryGame
             mediumbutton.Enabled = true;
             hardbutton.Enabled = true;
             label2.Text = "0";
-            this.label3.Text = "0s";
+            label3.Text = "0s";
             hard = false;
             disable();
 
@@ -132,32 +130,33 @@ namespace MemoryGame
             secondguess.Image = (Image)secondguess.Tag;
 
 
-            if (secondguess.Image == firstguess.Image && secondguess != firstguess)
+            if (secondguess.Image==firstguess.Image && secondguess!=firstguess)
             {
                 this.score += 1;
-                this.label2.Text = score.ToString();
+                label2.Text = score.ToString();
                 secondguess.Enabled = firstguess.Enabled = false;
                 firstguess = secondguess = null;
 
             }
             else
             {
-
+                
                 canclick = false;
                 clickTimer.Start();
             }
-
-            if (Convert.ToInt32(label2.Text) < 8) return;
-            if (hard) MessageBox.Show("Impressive!");
+            
+            if (Convert.ToInt32(label2.Text)<18) return;
+            timer.Stop();
+            if(hard) MessageBox.Show("Impressive!");
             else MessageBox.Show("Win");
-            timer1.Stop();
+            
             enableRestart();
-
+            
 
         }
         private void disable()
         {
-            foreach (var p in pictureBoxes)
+            foreach(var p in pictureBoxes)
             {
                 p.Enabled = false;
             }
@@ -167,13 +166,13 @@ namespace MemoryGame
             int num;
             do
             {
-                num = rnd.Next(0, pictureBoxes.Count());
+                num = rnd.Next(0,pictureBoxes.Count());
             } while (pictureBoxes[num].Tag != null);
             return pictureBoxes[num];
         }
         private void Randomize()
         {
-            foreach (var image in images)
+            foreach(var image in images)
             {
                 getEmpty().Tag = image;
                 getEmpty().Tag = image;
@@ -189,9 +188,9 @@ namespace MemoryGame
 
         }
 
-        private void start(int time, int interval)
+        private void start(int time,int interval)
         {
-
+            
             foreach (var p in pictureBoxes)
             {
                 p.Image = Properties.Resources.riddler;
@@ -210,7 +209,7 @@ namespace MemoryGame
 
         private void easyDifficulty(object sender, EventArgs e)
         {
-            start(100, 1500);
+            start(120,500);
             easybutton.Enabled = false;
             mediumbutton.Enabled = false;
             hardbutton.Enabled = false;
@@ -219,7 +218,7 @@ namespace MemoryGame
 
         private void mediumDifficulty(object sender, EventArgs e)
         {
-            start(60, 500);
+            start(90,1000);
             mediumbutton.Enabled = false;
             easybutton.Enabled = false;
             hardbutton.Enabled = false;
@@ -228,12 +227,24 @@ namespace MemoryGame
 
         private void hardDifficulty(object sender, EventArgs e)
         {
-            start(30, 500);
+            start(60,500);
             hardbutton.Enabled = false;
             easybutton.Enabled = false;
             mediumbutton.Enabled = false;
             hard = true;
 
+        }
+
+        private void Form4_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            GameMenu f1 = new GameMenu();
+            this.Hide();
+            f1.ShowDialog();
+            if (timer != null && clickTimer != null)
+            {
+                timer.Stop();
+                clickTimer.Stop();
+            }
         }
     }
 }

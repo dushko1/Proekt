@@ -11,7 +11,7 @@ using System.Windows.Forms;
 namespace MemoryGame
 {
 
-    public partial class Form4 : Form
+    public partial class Level2 : Form
     {
         PictureBox firstguess;
         PictureBox secondguess;
@@ -23,17 +23,23 @@ namespace MemoryGame
         Timer timer;
         bool hard = false;
         bool first = true;
-        public Form4()
+        public Level2()
         {
             InitializeComponent();
         }
 
 
-        private void Form4_FormClosed(object sender, FormClosedEventArgs e)
+        private void Form3_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Form1 f1 = new Form1();
-            this.Hide();
+            GameMenu f1 = new GameMenu();
+            if (timer != null && clickTimer != null)
+            {
+                timer.Stop();
+                clickTimer.Stop();
+            }
+            Hide();
             f1.ShowDialog();
+            
         }
         private void startGameTimer()
         {
@@ -45,9 +51,11 @@ namespace MemoryGame
                 if (time == 0)
                 {
                     timer.Stop();
+                    label3.Text = time.ToString() + "s";
                     MessageBox.Show("Out of time!\n"+"You lose!");
                     enableRestart();
-                    var remaining = TimeSpan.FromSeconds(time);
+                    return;
+                    
 
 
                 }
@@ -92,13 +100,7 @@ namespace MemoryGame
                     Properties.Resources.loki,
                     Properties.Resources.Green_Lantern_logo,
                     Properties.Resources.spiderman,
-                    Properties.Resources.wolverine,
-                    Properties.Resources.blackpanther,
-                    Properties.Resources.deadpool,
-                    Properties.Resources.hulk,
-                    Properties.Resources.teentitans,
-                    Properties.Resources.thanos,
-                    Properties.Resources.thor
+                    Properties.Resources.wolverine
 
 
                 };
@@ -150,7 +152,7 @@ namespace MemoryGame
                 clickTimer.Start();
             }
             
-            if (Convert.ToInt32(label2.Text)<18) return;
+            if (Convert.ToInt32(label2.Text)<12) return;
             timer.Stop();
             if(hard) MessageBox.Show("Impressive!");
             else MessageBox.Show("Win");
@@ -214,7 +216,7 @@ namespace MemoryGame
 
         private void easyDifficulty(object sender, EventArgs e)
         {
-            start(120,1500);
+            start(100,500);
             easybutton.Enabled = false;
             mediumbutton.Enabled = false;
             hardbutton.Enabled = false;
@@ -223,7 +225,7 @@ namespace MemoryGame
 
         private void mediumDifficulty(object sender, EventArgs e)
         {
-            start(90,1000);
+            start(60,1000);
             mediumbutton.Enabled = false;
             easybutton.Enabled = false;
             hardbutton.Enabled = false;
@@ -232,11 +234,16 @@ namespace MemoryGame
 
         private void hardDifficulty(object sender, EventArgs e)
         {
-            start(60,500);
+            start(30,500);
             hardbutton.Enabled = false;
             easybutton.Enabled = false;
             mediumbutton.Enabled = false;
             hard = true;
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
 
         }
     }

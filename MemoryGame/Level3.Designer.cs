@@ -1,6 +1,6 @@
 ﻿namespace MemoryGame
 {
-    partial class Form4
+    partial class Level3
     {
         /// <summary>
         /// Required designer variable.
@@ -606,6 +606,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Form4";
             this.Text = "Form3";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form4_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox24)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
