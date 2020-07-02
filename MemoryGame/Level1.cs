@@ -213,7 +213,7 @@ namespace MemoryGame
 
         private void easyDifficulty(object sender, EventArgs e)
         {
-            start(100, 1500);
+            start(90, 1000);
             easybutton.Enabled = false;
             mediumbutton.Enabled = false;
             hardbutton.Enabled = false;
@@ -222,7 +222,7 @@ namespace MemoryGame
 
         private void mediumDifficulty(object sender, EventArgs e)
         {
-            start(60, 500);
+            start(60, 1000);
             mediumbutton.Enabled = false;
             easybutton.Enabled = false;
             hardbutton.Enabled = false;

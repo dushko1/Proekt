@@ -216,7 +216,7 @@ namespace MemoryGame
 
         private void easyDifficulty(object sender, EventArgs e)
         {
-            start(100,500);
+            start(120,1000);
             easybutton.Enabled = false;
             mediumbutton.Enabled = false;
             hardbutton.Enabled = false;
@@ -225,7 +225,7 @@ namespace MemoryGame
 
         private void mediumDifficulty(object sender, EventArgs e)
         {
-            start(60,1000);
+            start(90,1000);
             mediumbutton.Enabled = false;
             easybutton.Enabled = false;
             hardbutton.Enabled = false;
@@ -234,7 +234,7 @@ namespace MemoryGame
 
         private void hardDifficulty(object sender, EventArgs e)
         {
-            start(30,500);
+            start(60,500);
             hardbutton.Enabled = false;
             easybutton.Enabled = false;
             mediumbutton.Enabled = false;
@@ -242,10 +242,6 @@ namespace MemoryGame
 
         }
 
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
 

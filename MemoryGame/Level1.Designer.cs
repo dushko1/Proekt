@@ -51,6 +51,7 @@
             this.pictureBox21 = new System.Windows.Forms.PictureBox();
             this.pictureBox22 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -73,7 +74,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(733, 356);
+            this.label1.Location = new System.Drawing.Point(700, 291);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(105, 33);
             this.label1.TabIndex = 2;
@@ -83,7 +84,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(834, 356);
+            this.label2.Location = new System.Drawing.Point(801, 291);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(32, 33);
             this.label2.TabIndex = 3;
@@ -93,7 +94,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(834, 429);
+            this.label3.Location = new System.Drawing.Point(790, 324);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(48, 33);
             this.label3.TabIndex = 4;
@@ -185,7 +186,7 @@
             this.hardbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hardbutton.Location = new System.Drawing.Point(706, 218);
             this.hardbutton.Name = "hardbutton";
-            this.hardbutton.Size = new System.Drawing.Size(165, 55);
+            this.hardbutton.Size = new System.Drawing.Size(176, 55);
             this.hardbutton.TabIndex = 70;
             this.hardbutton.Text = "Hard(30s)";
             this.hardbutton.UseVisualStyleBackColor = true;
@@ -196,7 +197,7 @@
             this.mediumbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mediumbutton.Location = new System.Drawing.Point(706, 140);
             this.mediumbutton.Name = "mediumbutton";
-            this.mediumbutton.Size = new System.Drawing.Size(165, 55);
+            this.mediumbutton.Size = new System.Drawing.Size(176, 55);
             this.mediumbutton.TabIndex = 69;
             this.mediumbutton.Text = "Medium(60s)";
             this.mediumbutton.UseVisualStyleBackColor = true;
@@ -207,9 +208,9 @@
             this.easybutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.easybutton.Location = new System.Drawing.Point(706, 66);
             this.easybutton.Name = "easybutton";
-            this.easybutton.Size = new System.Drawing.Size(165, 55);
+            this.easybutton.Size = new System.Drawing.Size(176, 55);
             this.easybutton.TabIndex = 68;
-            this.easybutton.Text = "Easy(100s)";
+            this.easybutton.Text = "Easy(90s)";
             this.easybutton.UseVisualStyleBackColor = true;
             this.easybutton.Click += new System.EventHandler(this.easyDifficulty);
             // 
@@ -303,12 +304,23 @@
             this.pictureBox9.TabStop = false;
             this.pictureBox9.Click += new System.EventHandler(this.ClickImage);
             // 
-            // Form2
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(689, 324);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(94, 33);
+            this.label5.TabIndex = 85;
+            this.label5.Text = "Time:";
+            // 
+            // Level1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Wheat;
             this.ClientSize = new System.Drawing.Size(913, 682);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.pictureBox9);
             this.Controls.Add(this.pictureBox14);
             this.Controls.Add(this.pictureBox15);
@@ -332,7 +344,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "Form2";
+            this.Name = "Level1";
             this.Text = "Form2";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form2_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -380,5 +392,6 @@
         private System.Windows.Forms.PictureBox pictureBox21;
         private System.Windows.Forms.PictureBox pictureBox22;
         private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.Label label5;
     }
 }
