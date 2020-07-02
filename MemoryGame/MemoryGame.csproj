@@ -122,5 +122,65 @@
   <ItemGroup>
     <None Include="Resources\img1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\batmanOK.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blackpanther.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\captain americaOK.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\daredevil.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Deadpool_Logo_1200x1200.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\deathstroke.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flash.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Green-Lantern-logo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hulk.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ironman.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\joker.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lokiOK.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\punisherOK.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spidermanOK.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\superman-clipart-logo-4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Teen_titans_logoOK.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\thanos.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\thorOK.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wolverine.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wonderwomanOK.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
