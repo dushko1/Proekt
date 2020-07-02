@@ -32,8 +32,11 @@ namespace MemoryGame
         private void Form3_FormClosed(object sender, FormClosedEventArgs e)
         {
             Form1 f1 = new Form1();
-            this.Hide();
+            timer.Stop();
+            clickTimer.Stop();
+            Hide();
             f1.ShowDialog();
+            
         }
         private void startGameTimer()
         {
@@ -45,9 +48,11 @@ namespace MemoryGame
                 if (time == 0)
                 {
                     timer.Stop();
+                    label3.Text = time.ToString() + "s";
                     MessageBox.Show("Out of time!\n"+"You lose!");
                     enableRestart();
-                    var remaining = TimeSpan.FromSeconds(time);
+                    return;
+                    
 
 
                 }
@@ -208,7 +213,7 @@ namespace MemoryGame
 
         private void easyDifficulty(object sender, EventArgs e)
         {
-            start(100,1500);
+            start(100,500);
             easybutton.Enabled = false;
             mediumbutton.Enabled = false;
             hardbutton.Enabled = false;

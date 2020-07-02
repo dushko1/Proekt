@@ -20,7 +20,7 @@ namespace MemoryGame
         Random rnd = new Random();
         Timer clickTimer;
         int time = 100;
-        Timer timer;
+        Timer timer1;
         bool hard = false;
         bool first = true;
         public Form2()
@@ -31,22 +31,26 @@ namespace MemoryGame
         private void Form2_FormClosed(object sender, FormClosedEventArgs e)
         {
             Form1 f1 = new Form1();
-            this.Hide();
+            timer1.Stop();
+            clickTimer.Stop();
+            Hide();
             f1.ShowDialog();
         }
         private void startGameTimer()
         {
-            timer = new Timer { Interval = 1000 };
-            timer.Start();
-            timer.Tick += delegate
+            timer1 = new Timer { Interval = 1000 };
+            timer1.Start();
+            timer1.Tick += delegate
             {
-                time--;
-                if (time == 0)
+                this.time--;
+                if (this.time == 0)
                 {
-                    timer.Stop();
+                    timer1.Stop();
+                    label3.Text = time.ToString() + "s";
                     MessageBox.Show("Out of time!\n" + "You lose!");
                     enableRestart();
-                    var remaining = TimeSpan.FromSeconds(time);
+                    return;
+
 
 
                 }
@@ -103,7 +107,7 @@ namespace MemoryGame
             mediumbutton.Enabled = true;
             hardbutton.Enabled = true;
             label2.Text = "0";
-            label3.Text = "0s";
+            this.label3.Text = "0s";
             hard = false;
             disable();
 
@@ -131,7 +135,7 @@ namespace MemoryGame
             if (secondguess.Image == firstguess.Image && secondguess != firstguess)
             {
                 this.score += 1;
-                label2.Text = score.ToString();
+                this.label2.Text = score.ToString();
                 secondguess.Enabled = firstguess.Enabled = false;
                 firstguess = secondguess = null;
 
@@ -146,7 +150,7 @@ namespace MemoryGame
             if (Convert.ToInt32(label2.Text) < 8) return;
             if (hard) MessageBox.Show("Impressive!");
             else MessageBox.Show("Win");
-            timer.Stop();
+            timer1.Stop();
             enableRestart();
 
 
@@ -215,7 +219,7 @@ namespace MemoryGame
 
         private void mediumDifficulty(object sender, EventArgs e)
         {
-            start(60, 1000);
+            start(60, 500);
             mediumbutton.Enabled = false;
             easybutton.Enabled = false;
             hardbutton.Enabled = false;
