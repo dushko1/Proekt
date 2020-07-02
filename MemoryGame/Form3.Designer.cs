@@ -239,7 +239,7 @@
             // hardbutton
             // 
             this.hardbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hardbutton.Location = new System.Drawing.Point(706, 218);
+            this.hardbutton.Location = new System.Drawing.Point(706, 224);
             this.hardbutton.Name = "hardbutton";
             this.hardbutton.Size = new System.Drawing.Size(165, 55);
             this.hardbutton.TabIndex = 70;
@@ -250,7 +250,7 @@
             // mediumbutton
             // 
             this.mediumbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mediumbutton.Location = new System.Drawing.Point(706, 140);
+            this.mediumbutton.Location = new System.Drawing.Point(706, 146);
             this.mediumbutton.Name = "mediumbutton";
             this.mediumbutton.Size = new System.Drawing.Size(165, 55);
             this.mediumbutton.TabIndex = 69;

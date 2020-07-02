@@ -28,6 +28,7 @@ namespace MemoryGame
             InitializeComponent();
         }
 
+
         private void Form3_FormClosed(object sender, FormClosedEventArgs e)
         {
             Form1 f1 = new Form1();
@@ -144,9 +145,10 @@ namespace MemoryGame
             }
             
             if (Convert.ToInt32(label2.Text)<12) return;
+            timer.Stop();
             if(hard) MessageBox.Show("Impressive!");
             else MessageBox.Show("Win");
-            timer.Stop();
+            
             enableRestart();
             
 
