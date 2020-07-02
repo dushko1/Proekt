@@ -145,9 +145,10 @@ namespace MemoryGame
             }
             
             if (Convert.ToInt32(label2.Text)<12) return;
+            timer.Stop();
             if(hard) MessageBox.Show("Impressive!");
             else MessageBox.Show("Win");
-            timer.Stop();
+            
             enableRestart();
             
 

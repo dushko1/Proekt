@@ -35,7 +35,7 @@ namespace MemoryGame
         {
             foreach(PictureBox p in panel1.Controls)
             {
-                p.Image = Properties.Resources.brain1;
+                p.Image = Properties.Resources.riddler;
             }
         }
     }
